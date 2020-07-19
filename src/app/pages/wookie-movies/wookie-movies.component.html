@@ -1,0 +1,6 @@
+<p>wookie-movies works!</p>
+<div *ngIf="movieList">
+  <div *ngFor="let movie of movieList">
+    <p><img width="200" height="150" src="{{ movie.backdrop }}" /></p>
+  </div>
+</div>
