@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { WookieMovieHeaderComponent } from './pages/wookie-movie-header/wookie-movie-header.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { WookieMovieSearchComponent } from './pages/wookie-search/wookie-movie-search.component';
+import { WookieMovieRatingComponent } from './pages/wookie-movie-rating/wookie-movie-rating.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { WookieMovieSearchComponent } from './pages/wookie-search/wookie-movie-s
     WookieMovieDetailComponent,
     WookieMovieHeaderComponent,
     WookieMovieSearchComponent,
+    WookieMovieRatingComponent,
     FilterPipe,
   ],
   imports: [

@@ -1,10 +1,19 @@
 <div class="container">
-  <div *ngFor="let movie of movieList">
-    <div class="img_container">
-      <a routerLink="/movie/{{ movie.id }}" routerLinkActive="active">
-        <img width="200" height="150" src="{{ movie.backdrop }}"
-      /></a>
-      <div class="text-center">{{ movie.title }}</div>
+  <div *ngIf="movieList && movieList.length > 0">
+    <div *ngFor="let movie of movieList">
+      <div>
+        <a
+          class="img_container"
+          routerLink="/movie/{{ movie.id }}"
+          routerLinkActive="active"
+        >
+          <img width="200" height="150" src="{{ movie.backdrop }}"
+        /></a>
+        <span class="caption">{{ movie.title }}</span>
+      </div>
     </div>
+  </div>
+  <div *ngIf="movieList.length === 0">
+    <h2 class="text-center">Sorry, no results found.</h2>
   </div>
 </div>

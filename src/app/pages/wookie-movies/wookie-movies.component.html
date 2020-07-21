@@ -2,11 +2,15 @@
   <h5>{{ genre }}</h5>
   <div fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="start">
     <div *ngFor="let movie of movieList | filter: genre:'genres'">
-      <div>
-        <span>
-          <a routerLink="/movie/{{ movie.id }}" routerLinkActive="active">
-            <img width="200" height="150" src="{{ movie.backdrop }}" /></a
-        ></span>
+      <div class="item">
+        <a
+          class="img_container"
+          routerLink="/movie/{{ movie.id }}"
+          routerLinkActive="active"
+        >
+          <img width="200" height="150" src="{{ movie.backdrop }}"
+        /></a>
+        <span class="caption">{{ movie.title }}</span>
       </div>
     </div>
   </div>

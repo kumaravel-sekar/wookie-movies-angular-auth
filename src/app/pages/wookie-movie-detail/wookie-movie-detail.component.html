@@ -4,18 +4,31 @@
       <img src="{{ movieDetail.poster }}" />
     </div>
     <div class="parallax-right-content">
-      <h4>
-        <span>{{ movieDetail.title }}</span
-        ><span>({{ movieDetail.imdb_rating }})</span>
-      </h4>
-      <p>
+      <div class="outerDiv">
+        <div class="leftDiv">{{ movieDetail.title }}</div>
+        <div class="rightDiv">
+          <app-wookie-movie-rating
+            rating="{{ movieDetail.imdb_rating }}"
+          ></app-wookie-movie-rating>
+        </div>
+      </div>
+      <p style="font-size: 20px; font-weight: bold;">
         {{ movieDetail.released_on | date: "yyyy" }} |
         {{ movieDetail.length }} |
         {{ movieDetail.director }}
       </p>
-      cast:
-      <span *ngFor="let cast of movieDetail.cast">{{ cast }} | </span>
-      <p style="padding-right: 8px;">
+      CAST:
+      <span
+        style="
+          font-size: 18px;
+          padding-right: 8px;
+          font-style: italic;
+          color: darkslategrey;
+        "
+        *ngFor="let cast of movieDetail.cast"
+        >{{ cast }} |
+      </span>
+      <p style="font-size: 18px; padding-right: 8px;">
         Movie Descrption: {{ movieDetail.overview }}
       </p>
     </div>

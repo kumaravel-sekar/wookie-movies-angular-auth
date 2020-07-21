@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "wookie-movies-angular-auth"
+    }
+  },
+  "defaultProject": "wookie-movies-angular-auth",
+  "cli": {
+    "analytics": "f7c80b85-5768-466c-b3ec-44f1fb8fdba4"
+  }
 }
