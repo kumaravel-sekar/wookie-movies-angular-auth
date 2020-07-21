@@ -1,6 +1,26 @@
 # WookieMoviesAngularAuth
 
+### **Home Page (Displays List of movies)**
+![1](https://user-images.githubusercontent.com/54956998/88102159-199fd380-cb6d-11ea-80ae-a268288439a7.PNG)
+
+### **Movie Detail Page (Displays detailed information of movie)**
+![2](https://user-images.githubusercontent.com/54956998/88102201-27edef80-cb6d-11ea-994d-24216d50026d.PNG)
+
+### **Search Page**
+![3](https://user-images.githubusercontent.com/54956998/88102210-2ae8e000-cb6d-11ea-9aae-dac89be74e2b.PNG)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+
+### **_Features Implemented_**
+
+- Interceptors (JWTInterceptor to handle the token in headers for each http Request to implement authentication )
+- Caching (CachingInterceptor is created to cache the server side url and response to avoid multiple api calls)
+- Pipes (Custom FilterPipe is created to filter images based on group like Action, Drama etc.,)
+- Rating (WookieMovieRatingComponent is used to display rating of the movie)
+- Search (WookieMovieSearchComponent is used to search the movie typed by the user in the search bar)
+- Rest API - GET call Integration
+- FlexLayout is used for Displaying of Movies in the landing page
+- Bootstrap is used for Search template 
 
 ## Development server
 
