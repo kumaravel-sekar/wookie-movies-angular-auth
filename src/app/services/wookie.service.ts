@@ -11,4 +11,9 @@ export class WookieService {
   getMovies(): Observable<WookieMovies> {
     return this.http.get<WookieMovies>(`${GenericConstants.BASE_URL}`);
   }
+
+  searchMovie(searchTxt: string): Observable<WookieMovies> {
+    const url = `${GenericConstants.BASE_URL}` + '?q=' + searchTxt;
+    return this.http.get<WookieMovies>(url);
+  }
 }

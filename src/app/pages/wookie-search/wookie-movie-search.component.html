@@ -1,0 +1,10 @@
+<div class="container">
+  <div *ngFor="let movie of movieList">
+    <div class="img_container">
+      <a routerLink="/movie/{{ movie.id }}" routerLinkActive="active">
+        <img width="200" height="150" src="{{ movie.backdrop }}"
+      /></a>
+      <div class="text-center">{{ movie.title }}</div>
+    </div>
+  </div>
+</div>

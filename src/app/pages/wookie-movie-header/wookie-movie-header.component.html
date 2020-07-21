@@ -1,1 +1,16 @@
-<h1>Header Component</h1>
+<div>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/"><h1>Wookie Movies</h1></a>
+    <form class="form-inline search-width">
+      <i class="fa fa-search icon-color" (click)="onSearch()"></i>
+      <input
+        class="form-control form-control-sm ml-3 w-75"
+        type="text"
+        placeholder="Search"
+        aria-label="Search"
+        [formControl]="wookieSearch"
+        (keyup.enter)="onSearch()"
+      />
+    </form>
+  </nav>
+</div>

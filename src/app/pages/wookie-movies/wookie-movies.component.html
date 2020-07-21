@@ -1,21 +1,13 @@
-<div *ngFor="let genre of genreList">
-  <h1>{{ genre }}</h1>
-
-  <div
-    class="container"
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutWrap
-    fxLayoutGap="0.5%"
-    fxLayoutAlign="center"
-  >
-    <mat-card *ngFor="let movie of movieList | filter: genre:'genres'">
-      <mat-card-content fxLayout.gt-xs="row" fxLayout.xs="column">
+<div class="container-padding" *ngFor="let genre of genreList">
+  <h5>{{ genre }}</h5>
+  <div fxLayout="row wrap" fxLayoutGap="1%" fxLayoutAlign="start">
+    <div *ngFor="let movie of movieList | filter: genre:'genres'">
+      <div>
         <span>
           <a routerLink="/movie/{{ movie.id }}" routerLinkActive="active">
             <img width="200" height="150" src="{{ movie.backdrop }}" /></a
         ></span>
-      </mat-card-content>
-    </mat-card>
+      </div>
+    </div>
   </div>
 </div>

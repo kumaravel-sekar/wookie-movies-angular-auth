@@ -13,6 +13,8 @@ import { CachingInterceptor } from './helpers/caching-interceptor';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { WookieMovieHeaderComponent } from './pages/wookie-movie-header/wookie-movie-header.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { WookieMovieSearchComponent } from './pages/wookie-search/wookie-movie-search.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { WookieMovieHeaderComponent } from './pages/wookie-movie-header/wookie-m
     WookieMoviesComponent,
     WookieMovieDetailComponent,
     WookieMovieHeaderComponent,
+    WookieMovieSearchComponent,
     FilterPipe,
   ],
   imports: [
@@ -29,6 +32,8 @@ import { WookieMovieHeaderComponent } from './pages/wookie-movie-header/wookie-m
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     CacheMapService,
