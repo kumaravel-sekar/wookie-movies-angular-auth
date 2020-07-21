@@ -1,0 +1,9 @@
+<div>
+  <span class="icon" *ngFor="let star of stars; let i = index">
+    <i
+      [ngClass]="{ 'active-star': i < ratedCount }"
+      class="fa fa-star"
+      aria-hidden="true"
+    ></i>
+  </span>
+</div>
