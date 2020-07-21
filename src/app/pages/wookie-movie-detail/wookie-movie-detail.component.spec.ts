@@ -1,19 +1,18 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { WookieMovieDetailComponent } from './wookie-movie-detail.component';
 
-import { WookieMoviesComponent } from './wookie-movies.component';
-
-describe('WookieMoviesComponent', () => {
-  let component: WookieMoviesComponent;
-  let fixture: ComponentFixture<WookieMoviesComponent>;
+describe('WookieMovieDetailComponent', () => {
+  let component: WookieMovieDetailComponent;
+  let fixture: ComponentFixture<WookieMovieDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WookieMoviesComponent],
+      declarations: [WookieMovieDetailComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WookieMoviesComponent);
+    fixture = TestBed.createComponent(WookieMovieDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

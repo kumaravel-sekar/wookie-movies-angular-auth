@@ -1,6 +1,21 @@
-<p>wookie-movies works!</p>
-<div *ngIf="movieList">
-  <div *ngFor="let movie of movieList">
-    <p><img width="200" height="150" src="{{ movie.backdrop }}" /></p>
+<div *ngFor="let genre of genreList">
+  <h1>{{ genre }}</h1>
+
+  <div
+    class="container"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWrap
+    fxLayoutGap="0.5%"
+    fxLayoutAlign="center"
+  >
+    <mat-card *ngFor="let movie of movieList | filter: genre:'genres'">
+      <mat-card-content fxLayout.gt-xs="row" fxLayout.xs="column">
+        <span>
+          <a routerLink="/movie/{{ movie.id }}" routerLinkActive="active">
+            <img width="200" height="150" src="{{ movie.backdrop }}" /></a
+        ></span>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>

@@ -1,0 +1,23 @@
+<div class="parallax-left-content" *ngIf="movieDetail">
+  <section class="parallax-position">
+    <div class="parallax-img-container">
+      <img src="{{ movieDetail.poster }}" />
+    </div>
+    <div class="parallax-right-content">
+      <h4>
+        <span>{{ movieDetail.title }}</span
+        ><span>({{ movieDetail.imdb_rating }})</span>
+      </h4>
+      <p>
+        {{ movieDetail.released_on | date: "yyyy" }} |
+        {{ movieDetail.length }} |
+        {{ movieDetail.director }}
+      </p>
+      cast:
+      <span *ngFor="let cast of movieDetail.cast">{{ cast }} | </span>
+      <p style="padding-right: 8px;">
+        Movie Descrption: {{ movieDetail.overview }}
+      </p>
+    </div>
+  </section>
+</div>
